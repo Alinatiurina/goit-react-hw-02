@@ -1,0 +1,26 @@
+.table {
+  border-collapse: collapse;
+  border: 1px solid rgb(0, 0, 0);
+  width: 100%;
+}
+.title {
+  background-color: rgb(61, 61, 61);
+  border: 1px solid rgb(0, 0, 0);
+}
+.titleItem {
+  color: white;
+  border: 1px solid rgb(0, 0, 0);
+  text-align: center;
+}
+.text {
+  border: 1px solid rgb(0, 0, 0);
+  text-align: center;
+}
+
+tr td {
+  background: #fff;
+}
+
+tr:nth-child(2n) td {
+  background: #d4d4d4;
+}
