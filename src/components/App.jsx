@@ -45,7 +45,6 @@ export default function App() {
         <>
         <Description />
         <Options updateFeedback={updateFeedback} total={totalFeedback} reset={resetFeedback} />
-        {totalFeedback != 0 && <button onClick={resetFeedback}>Reset</button>}
         {totalFeedback != 0 && <Feedback feedback={typesFeedback} total={totalFeedback} positive={positiveFeedback} />}
         {totalFeedback === 0 && <Notofication />}
         
