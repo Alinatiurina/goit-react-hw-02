@@ -7,19 +7,17 @@ import Notification from "./Notification/notification.jsx";
 
 const getSaveFeedback = () => {
         const savedFeedback = localStorage.getItem("feedback");
-        return savedFeedback != null ? JSON.parse(savedFeedback) : {"good":0,"neutral":0,"bad":0};
+        return savedFeedback != null ? JSON.parse(savedFeedback) : {
+                "good": 0,
+                "neutral": 0,
+                "bad": 0
+        };
         
 };
 
 export default function App() {
    
-        const [typesFeedback, setTypesFeedback] = useState(
-                getSaveFeedback,
-                {
-                good: 0,
-                neutral: 0,
-                bad: 0
-        });
+        const [typesFeedback, setTypesFeedback] = useState(getSaveFeedback);
         const updateFeedback = (feedbackType) => {
                 setTypesFeedback({
                         ...typesFeedback,
