@@ -3,11 +3,11 @@ import { useEffect } from "react";
 import Description from "./Description/description.jsx";
 import Options from "./Options/options.jsx";
 import Feedback from "./Feedback/feedback.jsx";
-import Notofication from "./Notification/notification.jsx";
+import Notification from "./Notification/notification.jsx";
 
 const getSaveFeedback = () => {
         const savedFeedback = localStorage.getItem("feedback");
-        return savedFeedback != null ? JSON.parse(savedFeedback) : {"good":null,"neutral":null,"bad":null};
+        return savedFeedback != null ? JSON.parse(savedFeedback) : {"good":0,"neutral":0,"bad":0};
         
 };
 
@@ -46,7 +46,7 @@ export default function App() {
         <Description />
         <Options updateFeedback={updateFeedback} total={totalFeedback} reset={resetFeedback} />
         {totalFeedback != 0 && <Feedback feedback={typesFeedback} total={totalFeedback} positive={positiveFeedback} />}
-        {totalFeedback === 0 && <Notofication />}
+        {totalFeedback === 0 && <Notification />}
         
        </>
   );
